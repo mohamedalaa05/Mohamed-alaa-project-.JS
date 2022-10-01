@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign in to NotePad</title>
+    <script src="https://kit.fontawesome.com/6945d66857.js" crossorigin="anonymous"></script>
+    <style>
+        #container {
+            width: 90%;
+            height: auto;
+            border: 10px solid rgba(8, 8, 8, 0.511);
+            border-radius: 10px;
+            padding:15px;
+            background-color: rgba(0, 0, 0, 0.664);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+        }
+
+        body {
+            background-image: url(note5.jpg);
+            background-size:contain
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 2px;
+
+        }
+
+        input {
+            border-radius: 5px;
+            width: 100%;
+            padding: 10px 0;
+            margin: 10px 0px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input:after {
+            content: " *";
+            color: rgb(255, 255, 255);
+            ;
+        }
+
+        .control {
+            margin: 2px 2px;
+        }
+
+        .btn-eye {width: 25px;
+            height: 25px;
+            border: none;
+            cursor: pointer;
+            
+        }
+
+        .passoword-control{
+            display: flex;
+        }
+
+        .hide-eye {
+            display: none;
+        }
+        .btn-sign{text-align: center;
+            padding: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="loginForm" onsubmit="login()">
+        <div id="container">
+            <h1>Sign in to editor</h1>
+            <div class="control">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" required placeholder="Enter your Email">
+            </div>
+            <div class="control">
+                <label for="password">Password</label>
+                <div class="passoword-control">
+                    <input id="password" type="password" required placeholder="Your Password">
+                    <button class="btn-eye" type="button" onclick="displayPassword()">
+                        <i id="eye" class="fa-solid fa-eye"></i>
+                        <i id="eye-slash" class="fa-solid fa-eye-slash hide-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+
+            <br>
+            <button class="btn-sign" type="submit">Sign in</button>
+
+        </div>
+    </form>
+
+    <script src="signin.js"></script>
+</body>
+
+</html>
